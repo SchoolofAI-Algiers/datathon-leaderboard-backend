@@ -7,9 +7,9 @@ from utils import preprocess_leaderboard
 api = kaggle.KaggleApi()
 api.authenticate()
 
-def get_public_leaderboard(competition_name):
+def fetch_public_leaderboard(competition_name):
     public_leaderboard = api.competition_view_leaderboard(competition_name)
     return preprocess_leaderboard(public_leaderboard)
 
-def get_private_leaderboard():
+def fetch_private_leaderboard():
     pass
